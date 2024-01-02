@@ -1,17 +1,18 @@
-<?php 
-
+<?php
 namespace engine;
 
-class Cms {
+class Cms
+{
+
     private $di;
-    
+
     public function __construct($di)
     {
         $this->di = $di;
     }
-    
+
     public function run()
     {
-        echo 'hello, world';
+        print_r($this->di);
     }
 }

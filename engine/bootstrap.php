@@ -8,6 +8,16 @@ use engine\Cms;
 try {
     
     $di = new DI();
+    
+    $services = require 'Config/Service.php';
+    
+    foreach ($services as $service)
+    {
+        $provider = new $service($di);
+        $provider->init();
+    }
+    
+    
     $cms = new Cms($di);
     
     $cms->run();
