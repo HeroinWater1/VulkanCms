@@ -3,18 +3,15 @@ namespace engine;
 
 class Cms
 {
-
     private $di;
-    
     public $route;
-
+    
     public function __construct($di)
-    {   
-        $this->route = $di->get('route');
+    {
         $this->di = $di;
-
+        $this->route = $di->get('route');
     }
-
+    
     public function run()
     {
         $this->route->add('home', '', 'HomeController:index');

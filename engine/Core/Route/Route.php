@@ -8,12 +8,17 @@ class Route
     
     public function add($key, $pattern, $controller, $method='GET')
     {
-        $routes[$key] = [
+        $this->routes[$key] = [
             'pattern' => $pattern,
             'controller' => $controller,
             'method' => $method
         ];
         
+        return $this->routes;
+    }
+    
+    public function getRoutes()
+    {
         return $this->routes;
     }
 }

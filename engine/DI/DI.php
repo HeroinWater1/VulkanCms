@@ -18,11 +18,6 @@ class DI
     
     public function get($key)
     {
-        return $this->has($key);
-    }
-    
-    public function has($key)
-    {
         return isset($this->container[$key]) ? $this->container[$key] : null;
     }
 }
