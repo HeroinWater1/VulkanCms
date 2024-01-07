@@ -8,7 +8,12 @@ class DI
      * @var array
      */
     private $container;
-    
+    /**
+     * 
+     * @param mixed $key
+     * @param mixed $value
+     * @return \engine\DI\DI
+     */
     public function set($key, $value)
     {
         $this->container[$key] = $value;
